@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
 
     setState(() {
       _informeText = "Informe seus dados!!";
+      _formKey = GlobalKey<FormState>();
     });
   }
 
@@ -33,7 +34,7 @@ class _HomeState extends State<Home> {
       double cPeso = double.parse(peso.text);
       double cAltura = double.parse(altura.text) / 100;
       double imc = cPeso / (cAltura * cAltura);
-      
+
       //print(imc);
 
       if (imc < 18.6) {
